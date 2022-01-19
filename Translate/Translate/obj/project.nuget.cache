@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rJCZNRr2AStNtLSfn/xTSakqumA9WOSgp3m0ecAWCGR5Sb8+o8aYW2YPcYf5SGMiFksZw4hEo2tllG57z/LdgQ==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\Demos-AI\\Translate\\Translate\\Translate.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\antonio.a.bruno\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.19.0\\microsoft.cognitiveservices.speech.1.19.0.nupkg.sha512"
+  ],
+  "logs": []
+}

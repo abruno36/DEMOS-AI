@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kyuYBDAPt6h3dVnYI4iJswnX8LzrGJTw07DpqV7YTolF6Y8tUkaOJSjcwMbAaSnTjmvGgKCtG5X3z+92m+nmaQ==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\Demos-AI\\Audio\\AI-Mic\\AI-Mic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\antonio.a.bruno\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.19.0\\microsoft.cognitiveservices.speech.1.19.0.nupkg.sha512"
+  ],
+  "logs": []
+}
