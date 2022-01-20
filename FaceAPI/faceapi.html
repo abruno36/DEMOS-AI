@@ -36,7 +36,7 @@
     <video autoplay id="video"></video>
     <canvas id="canvas"></canvas>
     <script src="camera.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery,min,js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>
         const subscriptionKey  = "67f92467f25c451f941ae8853536fe3f";
         const url = "https://ai900brunomaratona.cognitiveservices.azure.com/";
@@ -55,6 +55,29 @@
 
             return new Blob([uInt8Array], {
                 type: contenType
+            });
+        }
+
+        var processImage = function(sourceImage) {
+            var param = {
+                "detectionModel": "detection_01",
+                "returnFaceId": "true",
+                "returnAge": "true",
+                "returnFaceAttributes": "age, emotion, glasses, gender, smile",
+                "recognitionModel": "recognition_01"
+            };
+
+            $.ajax({
+                url: url + "?" + $.param(param),
+                type: 'POST',
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader("Conten-Type", "application/octet-stream");
+                    xhr.setRequestHeader("Ocp-Apim-Subsctription-key", subscriptionKey);
+                },
+                data: sourceImage,
+                processData: false
+            }).done(function(data) {
+
             });
         }
 
