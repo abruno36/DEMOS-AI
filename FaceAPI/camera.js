@@ -44,7 +44,7 @@
 
 
     async function initializeCamera() {
-        constraints.video.facingMode = "environemt"; //useFrontCamera ? "user" : "environemt";
+        constraints.video.facingMode = "environment"; //useFrontCamera ? "user" : "environment";
 
         try {
             videoStream = await navigator.mediaDevices.getUserMedia(constraints);
@@ -55,6 +55,7 @@
     }
 
     initializeCamera();
+    processFace();
 
     setInterval(function() {
         processFace();

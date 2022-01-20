@@ -35,11 +35,12 @@
     </div>
     <video autoplay id="video"></video>
     <canvas id="canvas"></canvas>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+    
     <script src="camera.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>
-        const subscriptionKey  = "67f92467f25c451f941ae8853536fe3f";
-        const url = "https://ai900brunomaratona.cognitiveservices.azure.com/";
+        const subscriptionKey  = "84fecb59abe04eb590f6429ce7e19d29";
+        const url = "https://ai900brunomaratona.cognitiveservices.azure.com/face/1.0/detect";
 
         var makeblob = function(dataURL) {
             const BASE64_MARKER = ';base64,';
@@ -50,9 +51,8 @@
             const uInt8Array = new Uint8Array(rawLength);
 
             for (let i=0; i < rawLength; ++i) {
-                uInt8Array[i] = raw.charCodeAt(i)
+                uInt8Array[i] = raw.charCodeAt(i);
             }
-
             return new Blob([uInt8Array], {
                 type: contenType
             });
@@ -69,14 +69,14 @@
 
             $.ajax({
                 url: url + "?" + $.param(param),
-                type: 'POST',
+                type: "POST",
                 beforeSend: function(xhr) {
-                    xhr.setRequestHeader("Conten-Type", "application/octet-stream");
-                    xhr.setRequestHeader("Ocp-Apim-Subsctription-key", subscriptionKey);
+                    xhr.setRequestHeader("Content-Type", "application/octet-stream");
+                    xhr.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
                 },
                 data: sourceImage,
                 processData: false
-            }).done(function(data) {
+            }).done(function(data){
 
             });
         }

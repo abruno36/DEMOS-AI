@@ -10,7 +10,7 @@ namespace AI_Mic
         static async Task Main(string[] args)
         {
             Console.WriteLine("Falai garota(o)!");
-            var config = SpeechConfig.FromSubscription("67f92467f25c451f941ae8853536fe3f", "southcentralus");
+            var config = SpeechConfig.FromSubscription("84fecb59abe04eb590f6429ce7e19d29", "southcentralus");
             var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
 
             var recognizer = new SpeechRecognizer(config, "pt-Br", audioConfig);

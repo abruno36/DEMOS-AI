@@ -12,7 +12,7 @@ namespace Translate
         {
             Console.WriteLine("Falai garota(o)!");
 
-            var speechConfig = SpeechTranslationConfig.FromSubscription("67f92467f25c451f941ae8853536fe3f", "southcentralus");
+            var speechConfig = SpeechTranslationConfig.FromSubscription("84fecb59abe04eb590f6429ce7e19d29", "southcentralus");
             speechConfig.SpeechRecognitionLanguage = "pt-BR";
 
             //speechConfig.AddTargetLanguage("en-US");
