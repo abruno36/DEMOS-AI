@@ -1,4 +1,5 @@
 (function() {
+    debugger;
     if (!"mediaDevices" in navigator || 
         !"getUserMedia" in navigator.mediaDevices
     ) {
@@ -33,6 +34,7 @@
 
 
     var processFace = function() {
+        debugger;
         const img = document.createElement("img");
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
@@ -55,7 +57,11 @@
     }
 
     initializeCamera();
-    processFace();
+    //processFace();
+
+    setTimeout(function() {
+        processFace();
+    }, 2000);
 
     setInterval(function() {
         processFace();
